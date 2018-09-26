@@ -7,11 +7,8 @@
 #include <iomanip>
 
 using namespace std;
-
-typedef vector<vector<int>> matrix_t;
 typedef chrono::high_resolution_clock hr_clock;
 typedef chrono::milliseconds ms;
-typedef unsigned long ulong;
 
 class Timer {
 private:
@@ -19,16 +16,11 @@ private:
 
 public:
 	static void start();
-
 	static double end();
 
-	static void print();
 };
 
 int get_random_number();
-
-matrix_t get_matrix(ulong rows, ulong cols);
-
-ostream& print_matrix(matrix_t& v);
+int* init_matrix(int dimension);
 
 #endif //LAB1_UTILS_H

@@ -11,8 +11,8 @@
 
 using namespace std;
 
-void point_multiplication(matrix_t&, matrix_t&, matrix_t&, int);
+void point_multiplication(int*, int*, int*, int, int);
 
-void block_multiplication(matrix_t&, matrix_t&, matrix_t&, int, int);
+void block_multiplication(int*, int*, int*, int, int, int);
 
 #endif //LAB1_LAB1_H

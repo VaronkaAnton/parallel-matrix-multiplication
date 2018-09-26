@@ -12,32 +12,17 @@ double Timer::end() {
 	return chrono::duration_cast<ms>(end_time - start_time).count() / 1000.;
 }
 
-void Timer::print() {
-	cout << "elapsed: " << setprecision(3) << end() << " s" << endl;
-}
-
-
 int get_random_number() {
 	return (rand() % 200) - 100;
 }
 
-matrix_t get_matrix(ulong rows, ulong cols) {
-	matrix_t v(rows, vector<int>(cols));
-	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
-			v[i][j] = get_random_number();
+int* init_matrix(int dimension)
+{
+	int* v = new int[dimension*dimension];
+	for (int i = 0; i < dimension; i++) {
+		for (int j = 0; j < dimension; j++) {
+			v[i*dimension + j] = get_random_number();
 		}
 	}
 	return v;
-}
-
-ostream& print_matrix(matrix_t& v) {
-	for (int i = 0; i < v.size(); i++) {
-		for (int j = 0; j < v[i].size(); j++) {
-			cout << v[i][j] << " ";
-		}
-		cout << endl;
-	}
-
-	return cout;
 }
