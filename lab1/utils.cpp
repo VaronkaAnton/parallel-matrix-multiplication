@@ -12,14 +12,9 @@ double Timer::end() {
 	return chrono::duration_cast<ms>(end_time - start_time).count() / 1000.;
 }
 
-/*int get_random_number() {
-	return (rand() % 200) - 100;
-}*/
-
 int get_random_number() {
-	return (rand() % 5);
+	return (rand() % 200) - 100;
 }
-
 
 int** init_matrix(int dimension)
 {
