@@ -21,6 +21,7 @@ public:
 };
 
 int get_random_number();
-int* init_matrix(int dimension);
-
+int** init_matrix(int dimension);
+int* convert_left(int** matrix, int dimension);
+int* convert_right(int** matrix, int dimension);
 #endif //LAB1_UTILS_H
