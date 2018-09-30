@@ -1,6 +1,3 @@
-#ifndef LAB1_UTILS_H
-#define LAB1_UTILS_H
-
 #include <iostream>
 #include <random>
 #include <chrono>
@@ -9,6 +6,7 @@
 using namespace std;
 typedef chrono::high_resolution_clock hr_clock;
 typedef chrono::milliseconds ms;
+// https://stackoverflow.com/questions/28928161/cleanest-and-simplest-way-to-get-elapsed-time-since-execution-in-c/28928371
 
 class Timer {
 private:
@@ -17,11 +15,6 @@ private:
 public:
 	static void start();
 	static double end();
-
 };
 
-int get_random_number();
-int** init_matrix(int dimension);
-int* convert_left(int** matrix, int dimension);
-int* convert_right(int** matrix, int dimension);
-#endif //LAB1_UTILS_H
+int* init_matrix(int dimension);
